@@ -29,7 +29,8 @@ body{
 }
 a{color:inherit;text-decoration:none;}
 ::selection{background:var(--ink);color:var(--paper);}
-img{display:block;}
+img{display:block;max-width:100%;}
+body{overflow-x:hidden;}
 
 /* ---------- nav ---------- */
 nav{
@@ -121,13 +122,13 @@ figcaption{
 /* ---------- focus cards (Merit-style grid) ---------- */
 .focus{border-top:1px solid var(--hair);}
 .focus .cards{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3vw;
 }
 @media(max-width:900px){.focus .cards{grid-template-columns:1fr;row-gap:9vh;}}
 .focus a.card{display:block;}
 .focus .imgwrap{overflow:hidden;}
 .focus .imgwrap img{
-  aspect-ratio:4/5;object-fit:cover;
+  width:100%;aspect-ratio:4/5;object-fit:cover;
   transition:transform 1.2s cubic-bezier(.2,.6,.2,1), filter .6s ease;
 }
 .focus a.card:hover .imgwrap img{transform:scale(1.035);filter:saturate(1) contrast(1);}
@@ -355,7 +356,6 @@ footer .base{
   <div class="base">
     <span>© 2026 The Randall W. Lewis Family Foundation</span>
     <span>The foundation does not accept unsolicited grant proposals.</span>
-    <span>Site by MoreSleep</span>
   </div>
 </footer>
 
