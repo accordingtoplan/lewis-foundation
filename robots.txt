@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://accordingtoplan.github.io/lewis-foundation/sitemap.xml
